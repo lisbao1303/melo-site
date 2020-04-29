@@ -2,7 +2,7 @@ import React from "react";
 
 function Sendmail() {
   return (
-    <form name="contact" method="post">
+    <form name="contact" action="/" method="post">
       <input type="hidden" name="form-name" value="contact" />
       <p>
         <label>
