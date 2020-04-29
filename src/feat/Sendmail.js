@@ -6,21 +6,29 @@ function Sendmail() {
       <input type="hidden" name="form-name" value="contact" />
       <p>
         <label>
-          Your Name: <input type="text" name="name" />
+          Nome: <input type="text" name="name" />
         </label>
       </p>
       <p>
         <label>
-          Your Email: <input type="email" name="email" />
+          Seu Email: <input type="email" name="email" />
         </label>
       </p>
       <p>
         <label>
-          Message: <textarea name="message"></textarea>
+          Assunto: <input type="text" name="name" />
         </label>
       </p>
       <p>
-        <button type="submit">Send</button>
+        <label>
+          Mensagem: <textarea name="message"></textarea>
+        </label>
+      </p>
+      <p>
+        <div data-netlify-recaptcha="true"></div>
+      </p>
+      <p>
+        <button type="submit">Enviar</button>
       </p>
     </form>
   );
