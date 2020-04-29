@@ -1,16 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import Sendmail from "./feat/Sendmail";
-function App() {
-  const [teste, settest] = useState("esperando comando");
+import "bootstrap/dist/css/bootstrap.min.css";
 
+import HeadLogo from "./feat/HeadLogo";
+import ActionBar from "./feat/ActionBar";
+import Conteudo from "./feat/Conteudo";
+function App() {
   return (
     <div className="conteinerprincipal">
-      <h1>O estado irá mudar: {teste}</h1>
-      <button type="button" onClick={() => settest("mudança de estado")}>
-        clique aqui
-      </button>
-      <Sendmail />
+      <div className="catalogo">
+        <div>
+          <HeadLogo />
+        </div>
+        <div>
+          <ActionBar />
+        </div>
+        <div>
+          <Conteudo />
+        </div>
+      </div>
     </div>
   );
 }
