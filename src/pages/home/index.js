@@ -20,8 +20,8 @@ function Home() {
           </div>
           <div>Home page</div>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

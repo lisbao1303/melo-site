@@ -21,8 +21,8 @@ class Ferramentas extends React.Component {
             </div>
             <PageCard />
           </div>
-          <Footer />
         </div>
+        <Footer />
       </div>
     );
   }

@@ -20,8 +20,8 @@ function Contato() {
           </div>
           <div>Contato page</div>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

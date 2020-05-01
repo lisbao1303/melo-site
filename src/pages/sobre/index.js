@@ -20,8 +20,8 @@ function Sobre() {
           </div>
           <div>Sobre page</div>
         </div>
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }
