@@ -1,6 +1,6 @@
 import React from "react";
 import { Media } from "reactstrap";
-import banner from "@/banner.png";
+import banner from "@/banner.jpeg";
 class HeadLogo extends React.Component {
   render() {
     return (
