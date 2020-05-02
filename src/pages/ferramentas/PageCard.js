@@ -8,46 +8,48 @@ class PageCard extends React.Component {
       categorias: [
         {
           name: "Brocas e escariadores",
-          src: "./Imagens-largemedia/250x24camelo.jpg",
-          onClick: "",
+          src: "./Imagens-largemedia/Broca/DSC_1925.JPG",
+          onClick: "/ferramentas/brocasescariadores",
         },
         {
           name: "Cabeçotes",
-          src: "./Kyle_Walker.jpg",
-          onClick: "",
+          src: "./Imagens-largemedia/Cabeçote porta lixa/DSC_1914.JPG",
+          onClick: "/ferramentas/cabecotes",
         },
         {
           name: "Facas",
-          src: "./Kyle_Walker.jpg",
-          onClick: "",
+          src: "./Imagens-largemedia/Faca/DSC_1889.JPG",
+          onClick: "/ferramentas/facas",
         },
         {
           name: "Parafusos",
-          src: "./Kyle_Walker.jpg",
-          onClick: "",
+          src: "./Imagens-largemedia/Parafuso-1.12-Mazutti-com-porca-Fepam.jpg",
+          onClick: "/ferramentas/parafusos",
         },
         {
           name: "Rebolos",
-          src: "./Kyle_Walker.jpg",
-          onClick: "",
+          src: "./Imagens-largemedia/Rebolo Diamantado/DSC_1933.JPG",
+          onClick: "/ferramentas/rebolos",
         },
         {
           name: "Serra circular",
-          src: "./Kyle_Walker.jpg",
-          onClick: "",
+          src:
+            "./Imagens-largemedia/Disco de serra circular 300x96Z RT F.30 FREUD.jpg",
+          onClick: "/ferramentas/serra",
         },
         {
           name: "Serrafita",
-          src: "./Kyle_Walker.jpg",
-          onClick: "",
+          src: "./Imagens-largemedia/serra-fita-açougue.png",
+          onClick: "/ferramentas/serrafita",
         },
       ],
     };
   }
   render() {
-    let catCards = this.state.categorias.map((categoria) => {
+    let catCards = this.state.categorias.map((categoria, i) => {
       return (
         <CardClick
+          key={i}
           name={categoria.name}
           src={categoria.src}
           onClick={categoria.onClick}

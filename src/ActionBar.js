@@ -11,7 +11,7 @@ import {
 } from "reactstrap";
 
 function ActionBar(props) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const toggle = () => setIsOpen(!isOpen);
 
@@ -22,7 +22,7 @@ function ActionBar(props) {
       </NavbarBrand>
       <div className="space"></div>
       <NavbarToggler onClick={toggle} />
-      <Collapse isOpen={isOpen} navbar>
+      <Collapse isOpen={!isOpen} navbar>
         <Nav className="mr-auto " navbar>
           <NavItem>
             <NavLink className="text-white" href="/">
