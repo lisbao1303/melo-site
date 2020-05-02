@@ -8,7 +8,7 @@ class PageCard extends React.Component {
       categorias: [
         {
           name: "Brocas e escariadores",
-          src: "./Kyle_Walker.jpg",
+          src: "./Imagens-largemedia/250x24camelo.jpg",
           onClick: "",
         },
         {
