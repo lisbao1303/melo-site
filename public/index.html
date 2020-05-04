@@ -12,19 +12,19 @@
     <div id="root"></div>
     <!-- A little help for the Netlify post-processing bots -->
     <form
-      name="contact"    
+      name="contact"
       netlify
       netlify-honeypot="bot-field"
       hidden
-      method="POST" data-netlify-recaptcha="true" data-netlify="true"
+      method="POST"
+      data-netlify-recaptcha="true"
+      data-netlify="true"
     >
       <input type="text" name="name" />
       <input type="phone" name="phone" />
       <input type="email" name="email" />
       <textarea name="message"></textarea>
-    <p>
-    <div data-netlify-recaptcha="true"></div>
-    </p>
+      <div netlify-recaptcha></div>
     </form>
     <!--
       This HTML file is a template.
