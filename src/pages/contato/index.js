@@ -23,9 +23,30 @@ function Contato() {
           <div>
             <div className="titlecontato">Solicite um Orçamento</div>
             <div className="formulario">
-              <Card className="cardcontato" color="secondary">
-                <Sendmail />
-              </Card>
+              <Route
+                exact
+                path={match.url}
+                render={() => (
+                  <Card className="cardcontato" color="secondary">
+                    <Sendmail />
+                  </Card>
+                )}
+              />
+              <Route
+                path={`${match.url}/enviado`}
+                render={(props) => (
+                  <div className="formulariosuc">
+                    <div className="titulosucesso">
+                      <h3>Formulário Enviado!</h3>
+                      <div className="msgsucesso">
+                        Obrigado, por contatar-nos.
+                        <br />
+                        Em breve entraremos em contato.
+                      </div>
+                    </div>
+                  </div>
+                )}
+              />
             </div>
           </div>
         </div>

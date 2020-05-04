@@ -18,16 +18,6 @@ function Contato() {
           <div>
             <ActionBar text="Contato" icon={faEnvelopeOpenText} />
           </div>
-          <div className="formulariosuc">
-            <div className="titulosucesso">
-              <h3>Formulário Enviado!</h3>
-              <div className="msgsucesso">
-                Obrigado, por contatar-nos.
-                <br />
-                Em breve entraremos em contato.
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       <Footer />
