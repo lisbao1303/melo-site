@@ -3,7 +3,7 @@ import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 
 function Sendmail() {
   return (
-    <Form name="contact" method="post">
+    <Form name="contact" action="/enviado" method="post">
       <input type="hidden" name="form-name" value="contact" />
       <FormGroup>
         <Label>Nome:</Label>
