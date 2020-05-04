@@ -3,7 +3,7 @@ import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 
 function Sendmail() {
   return (
-    <Form name="contact" action="/contato/enviado" method="post">
+    <Form name="contact" method="post">
       <input type="hidden" name="form-name" value="contact" />
       <FormGroup>
         <Label>Nome:</Label>
@@ -27,6 +27,9 @@ function Sendmail() {
         <Input type="textarea" name="message" bsSize="sm" id="exampleText" />
       </FormGroup>
 
+      <p>
+        <div data-netlify-recaptcha="true"></div>
+      </p>
       <Button color="success" type="submit">
         Enviar
       </Button>
