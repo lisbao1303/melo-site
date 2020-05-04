@@ -26,7 +26,7 @@ const Contato = ({ match }) => {
             <div className="formulario">
               <Card className="cardcontato" color="secondary">
                 <div>
-                  <Form name="contact" method="post">
+                  <Form name="contact" method="post" action="/sobre">
                     <input type="hidden" name="form-name" value="contact" />
                     <FormGroup>
                       <Label>Nome:</Label>
@@ -65,6 +65,7 @@ const Contato = ({ match }) => {
                       />
                     </FormGroup>
 
+                    <div name="recaptcha" data-netlify-recaptcha="true"></div>
                     <Button color="success" type="submit">
                       Enviar
                     </Button>
