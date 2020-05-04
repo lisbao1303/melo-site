@@ -40,7 +40,7 @@ function Routes() {
         <Route path="/ferramentas/serrafita" component={Serrafitas} />
         <Route path="/sobre" component={Sobre} />
         <Route path="/contato" exact component={Contato} />
-        <Route path="/contato/enviado" component={Enviado} />
+        <Route path="/enviado" component={Enviado} />
       </Switch>
     </BrowserRouter>
   );
