@@ -33,7 +33,7 @@ const Contato = ({ match }) => {
                     render={() => (
                       <Form
                         name="contact"
-                        action={`${match.url}/enviado`}
+                        action={`${match.url}/${"enviado"}`}
                         method="post"
                       >
                         <input type="hidden" name="form-name" value="contact" />
@@ -89,7 +89,7 @@ const Contato = ({ match }) => {
                   />
 
                   <Route
-                    path={`${match.url}/enviado`}
+                    path={`${match.url}/:i`}
                     render={(props) => (
                       <div className="formulariosuc">
                         <div className="titulosucesso">
