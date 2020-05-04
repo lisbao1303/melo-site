@@ -18,7 +18,7 @@ function Sobre() {
           <div>
             <ActionBar text="Localização" icon={faMapMarkerAlt} />
           </div>
-          <div>Sobre page</div>
+          <div>Success page</div>
         </div>
       </div>
       <Footer />
