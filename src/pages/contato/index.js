@@ -33,7 +33,7 @@ class Contato extends React.Component {
                 <Card className="cardcontato" color="secondary">
                   <div>
                     <Form
-                      name="contacto"
+                      name="contact"
                       method="post"
                       action="/contato/success"
                       onSubmit={this.submitForm.bind(this)}
