@@ -1,5 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
+import { Button, Form, FormGroup, Label, Input } from "reactstrap";
+
 import "../../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { faEnvelopeOpenText } from "@fortawesome/free-solid-svg-icons";
@@ -8,9 +10,8 @@ import { Card } from "reactstrap";
 import HeadLogo from "../../HeadLogo";
 import ActionBar from "../../ActionBar";
 import Footer from "../../Footer";
-import Sendmail from "@/Sendmail";
 
-function Contato({ match }) {
+const Contato = ({ match }) => {
   return (
     <div className="conteinerprincipal">
       <div className="campocentral">
@@ -24,30 +25,86 @@ function Contato({ match }) {
           <div>
             <div className="titlecontato">Solicite um Orçamento</div>
             <div className="formulario">
-              <Route
-                exact
-                path={match.url}
-                render={() => (
-                  <Card className="cardcontato" color="secondary">
-                    <Sendmail />
-                  </Card>
-                )}
-              />
-              <Route
-                path={`${match.url}/enviado`}
-                render={(props) => (
-                  <div className="formulariosuc">
-                    <div className="titulosucesso">
-                      <h3>Formulário Enviado!</h3>
-                      <div className="msgsucesso">
-                        Obrigado, por contatar-nos.
-                        <br />
-                        Em breve entraremos em contato.
+              <Card className="cardcontato" color="secondary">
+                <div>
+                  <Route
+                    exact
+                    path={match.url}
+                    render={() => (
+                      <Form
+                        name="contact"
+                        action="/contato/enviado"
+                        method="post"
+                      >
+                        <input type="hidden" name="form-name" value="contact" />
+                        <FormGroup>
+                          <Label>Nome:</Label>
+                          <Input
+                            type="text"
+                            name="name"
+                            bsSize="sm"
+                            placeholder="Nome ou Empresa"
+                          />
+                        </FormGroup>
+                        <FormGroup>
+                          <Label>Telefone:</Label>
+                          <Input
+                            type="phonenumber"
+                            name="phone"
+                            bsSize="sm"
+                            placeholder=""
+                          />
+                        </FormGroup>
+                        <FormGroup>
+                          <Label>Email:</Label>
+                          <Input
+                            type="email"
+                            name="email"
+                            bsSize="sm"
+                            placeholder=""
+                          />
+                        </FormGroup>
+                        <FormGroup>
+                          <Label>Mensagem:</Label>
+                          <Input
+                            type="textarea"
+                            name="message"
+                            bsSize="sm"
+                            id="exampleText"
+                          />
+                        </FormGroup>
+
+                        <p>
+                          <div data-netlify-recaptcha="true"></div>
+                        </p>
+                        <Button
+                          color="success"
+                          onClick="/contato/enviado"
+                          type="submit"
+                        >
+                          Enviar
+                        </Button>
+                      </Form>
+                    )}
+                  />
+
+                  <Route
+                    path={`${match.url}/enviado`}
+                    render={(props) => (
+                      <div className="formulariosuc">
+                        <div className="titulosucesso">
+                          <h3>Formulário Enviado!</h3>
+                          <div className="msgsucesso">
+                            Obrigado, por contatar-nos.
+                            <br />
+                            Em breve entraremos em contato.
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                )}
-              />
+                    )}
+                  />
+                </div>
+              </Card>
             </div>
           </div>
         </div>
@@ -55,6 +112,6 @@ function Contato({ match }) {
       <Footer />
     </div>
   );
-}
+};
 
 export default Contato;
