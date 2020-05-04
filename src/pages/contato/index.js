@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 
 import "../../App.css";
@@ -11,85 +11,81 @@ import HeadLogo from "../../HeadLogo";
 import ActionBar from "../../ActionBar";
 import Footer from "../../Footer";
 
-class Contato extends React.Component {
-  submitForm(e) {
-    e.preventDefault();
-    this.props.history.push("/contato/success");
-  }
-  render() {
-    return (
-      <div className="conteinerprincipal">
-        <div className="campocentral">
-          <div className="catalogo">
-            <div>
-              <HeadLogo />
-            </div>
-            <div>
-              <ActionBar text="Contato" icon={faEnvelopeOpenText} />
-            </div>
-            <div>
-              <div className="titlecontato">Solicite um Orçamento</div>
-              <div className="formulario">
-                <Card className="cardcontato" color="secondary">
-                  <div>
-                    <Form
-                      name="contact"
-                      method="post"
-                      action="/contato/success"
-                    >
-                      <input type="hidden" name="form-name" value="contact" />
-                      <FormGroup>
-                        <Label>Nome:</Label>
-                        <Input
-                          type="text"
-                          name="name"
-                          bsSize="sm"
-                          placeholder="Nome ou Empresa"
-                        />
-                      </FormGroup>
-                      <FormGroup>
-                        <Label>Telefone:</Label>
-                        <Input
-                          type="phonenumber"
-                          name="phone"
-                          bsSize="sm"
-                          placeholder=""
-                        />
-                      </FormGroup>
-                      <FormGroup>
-                        <Label>Email:</Label>
-                        <Input
-                          type="email"
-                          name="email"
-                          bsSize="sm"
-                          placeholder=""
-                        />
-                      </FormGroup>
-                      <FormGroup>
-                        <Label>Mensagem:</Label>
-                        <Input
-                          type="textarea"
-                          name="message"
-                          bsSize="sm"
-                          id="exampleText"
-                        />
-                      </FormGroup>
+function Contato() {
+  let history = useHistory();
 
-                      <div name="recaptcha" data-netlify-recaptcha="true"></div>
-                      <Button color="success" type="submit">
-                        Enviar
-                      </Button>
-                    </Form>
-                  </div>
-                </Card>
-              </div>
+  function handleClick() {
+    history.push("/contato/success");
+  }
+
+  return (
+    <div className="conteinerprincipal">
+      <div className="campocentral">
+        <div className="catalogo">
+          <div>
+            <HeadLogo />
+          </div>
+          <div>
+            <ActionBar text="Contato" icon={faEnvelopeOpenText} />
+          </div>
+          <div>
+            <div className="titlecontato">Solicite um Orçamento</div>
+            <div className="formulario">
+              <Card className="cardcontato" color="secondary">
+                <div>
+                  <Form name="contact" method="post" action="/contato/success">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <FormGroup>
+                      <Label>Nome:</Label>
+                      <Input
+                        type="text"
+                        name="name"
+                        bsSize="sm"
+                        placeholder="Nome ou Empresa"
+                      />
+                    </FormGroup>
+                    <FormGroup>
+                      <Label>Telefone:</Label>
+                      <Input
+                        type="phonenumber"
+                        name="phone"
+                        bsSize="sm"
+                        placeholder=""
+                      />
+                    </FormGroup>
+                    <FormGroup>
+                      <Label>Email:</Label>
+                      <Input
+                        type="email"
+                        name="email"
+                        bsSize="sm"
+                        placeholder=""
+                      />
+                    </FormGroup>
+                    <FormGroup>
+                      <Label>Mensagem:</Label>
+                      <Input
+                        type="textarea"
+                        name="message"
+                        bsSize="sm"
+                        id="exampleText"
+                      />
+                    </FormGroup>
+
+                    <div name="recaptcha" data-netlify-recaptcha="true"></div>
+                    <Button color="success" type="submit" onClick={handleClick}>
+                      Enviar
+                    </Button>
+                  </Form>
+                </div>
+              </Card>
             </div>
           </div>
         </div>
-        <Footer />
       </div>
-    );
-  }
+      <Footer />
+    </div>
+  );
 }
 
 export default Contato;
