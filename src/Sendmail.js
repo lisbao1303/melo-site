@@ -30,7 +30,7 @@ function Sendmail() {
       <p>
         <div data-netlify-recaptcha="true"></div>
       </p>
-      <Button color="success" type="submit">
+      <Button color="success" onClick="/contato/enviado" type="submit">
         Enviar
       </Button>
     </Form>

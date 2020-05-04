@@ -1,6 +1,7 @@
 import React from "react";
 
 const Product = ({ match, data }) => {
+  // eslint-disable-next-line
   var product = data.find((p) => p.id == match.params.productId);
   var productData;
 

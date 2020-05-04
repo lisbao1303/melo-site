@@ -1,4 +1,5 @@
 import React from "react";
+import { Route } from "react-router-dom";
 import "../../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { faEnvelopeOpenText } from "@fortawesome/free-solid-svg-icons";
@@ -9,7 +10,7 @@ import ActionBar from "../../ActionBar";
 import Footer from "../../Footer";
 import Sendmail from "@/Sendmail";
 
-function Contato() {
+function Contato({ match }) {
   return (
     <div className="conteinerprincipal">
       <div className="campocentral">
