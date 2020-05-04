@@ -26,7 +26,7 @@ const Contato = ({ match }) => {
             <div className="formulario">
               <Card className="cardcontato" color="secondary">
                 <div>
-                  <Form name="contact" method="post">
+                  <Form name="contacto" method="post">
                     <input type="hidden" name="form-name" value="contact" />
                     <FormGroup>
                       <Label>Nome:</Label>
