@@ -31,7 +31,7 @@ const Contato = ({ match }) => {
                     exact
                     path={match.url}
                     render={() => (
-                      <Form name="contact" action="/contato" method="post">
+                      <Form name="contact" method="post">
                         <input type="hidden" name="form-name" value="contact" />
                         <FormGroup>
                           <Label>Nome:</Label>
@@ -70,14 +70,7 @@ const Contato = ({ match }) => {
                           />
                         </FormGroup>
 
-                        <p>
-                          <div data-netlify-recaptcha="true"></div>
-                        </p>
-                        <Button
-                          color="success"
-                          onClick="/contato/enviado"
-                          type="submit"
-                        >
+                        <Button color="success" type="submit">
                           Enviar
                         </Button>
                       </Form>
