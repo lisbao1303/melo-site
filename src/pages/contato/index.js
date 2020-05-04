@@ -36,7 +36,6 @@ class Contato extends React.Component {
                       name="contact"
                       method="post"
                       action="/contato/success"
-                      onSubmit={this.submitForm.bind(this)}
                     >
                       <input type="hidden" name="form-name" value="contact" />
                       <FormGroup>
