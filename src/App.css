@@ -19,16 +19,50 @@
   border-style: solid;
   border-color: #57b0dc;
   border-width: 1px;
+  background-color: #dcdcdc;
 }
 
 .space {
   width: 60%;
 }
 .PageCard {
+  background-color: #dcdcdc;
   padding: 20px;
 }
 .embed-responsive .card-img-top {
   object-fit: cover;
+}
+.formulario {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.cardcontato {
+  color: white;
+  width: 60%;
+  padding: 30px;
+}
+.titlecontato {
+  padding: 20px;
+  color: #57b0dc;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.formulariosuc {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+.msgsucesso {
+  display: flex;
+  text-align: center;
 }
 @media only screen and (max-width: 600px) {
   .space {

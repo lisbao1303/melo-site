@@ -11,11 +11,16 @@
   <body>
     <div id="root"></div>
     <!-- A little help for the Netlify post-processing bots -->
-    <form name="contact" action="/" netlify netlify-honeypot="bot-field" hidden>
+    <form
+      name="contact"
+      action="/contato/enviado"
+      netlify
+      netlify-honeypot="bot-field"
+      hidden
+    >
       <input type="text" name="name" />
       <input type="phone" name="phone" />
       <input type="email" name="email" />
-      <input type="text" name="subject" />
       <textarea name="message"></textarea>
     </form>
     <!--

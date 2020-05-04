@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import "@/App.css";
-import { Row } from "reactstrap";
+import { Row, Breadcrumb, BreadcrumbItem } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { faToolbox } from "@fortawesome/free-solid-svg-icons";
 
@@ -515,7 +515,19 @@ const Products = ({ match }) => {
 
           <Route
             path={`${match.url}/:productId`}
-            render={(props) => <Product data={productsData} {...props} />}
+            render={(props) => (
+              <div>
+                <Breadcrumb>
+                  <BreadcrumbItem>
+                    <a href={match.url}>Brocas e Escariadores</a>
+                  </BreadcrumbItem>
+                  <BreadcrumbItem active>
+                    {props.match.params.productId}
+                  </BreadcrumbItem>
+                </Breadcrumb>
+                <Product data={productsData} {...props} />
+              </div>
+            )}
           />
           <Route
             exact

@@ -15,9 +15,23 @@ function ActionBar(props) {
 
   const toggle = () => setIsOpen(!isOpen);
 
+  const path = () => {
+    switch (props.text) {
+      case "Home":
+        return "/";
+      case "Ferramentas":
+        return "/ferramentas";
+      case "Contato":
+        return "/contato";
+      case "Localização":
+        return "/sobre";
+      default:
+        return "/";
+    }
+  };
   return (
     <Navbar className="" color="primary" dark expand="md">
-      <NavbarBrand className="text-warning" href="/">
+      <NavbarBrand className="text-warning" href={path}>
         <FontAwesomeIcon icon={props.icon} /> {props.text}
       </NavbarBrand>
       <div className="space"></div>

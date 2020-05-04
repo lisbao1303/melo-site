@@ -1,32 +1,33 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import { Button, Form, FormGroup, Label, Input } from "reactstrap";
+
 function Sendmail() {
   return (
     <Form name="contact" action="/" method="post">
       <input type="hidden" name="form-name" value="contact" />
-      <Form.Group>
-        <Form.Label>Nome:</Form.Label>
-        <Form.Control type="text" name="name" placeholder="nome" />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label>Telefone:</Form.Label>
-        <Form.Control type="phonenumber" name="phone" placeholder="()" />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label>Email:</Form.Label>
-        <Form.Control type="email" name="email" placeholder="@" />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label>Assunto:</Form.Label>
-        <Form.Control type="text" name="subject" placeholder=".." />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label>Mensagem:</Form.Label>
-        <Form.Control as="textarea" rows="3" name="message" />
-      </Form.Group>
+      <FormGroup>
+        <Label>Nome:</Label>
+        <Input
+          type="text"
+          name="name"
+          bsSize="sm"
+          placeholder="Nome ou Empresa"
+        />
+      </FormGroup>
+      <FormGroup>
+        <Label>Telefone:</Label>
+        <Input type="phonenumber" name="phone" bsSize="sm" placeholder="" />
+      </FormGroup>
+      <FormGroup>
+        <Label>Email:</Label>
+        <Input type="email" name="email" bsSize="sm" placeholder="" />
+      </FormGroup>
+      <FormGroup>
+        <Label>Mensagem:</Label>
+        <Input type="textarea" name="message" bsSize="sm" id="exampleText" />
+      </FormGroup>
 
-      <Button variant="primary" type="submit">
+      <Button color="success" type="submit">
         Enviar
       </Button>
     </Form>

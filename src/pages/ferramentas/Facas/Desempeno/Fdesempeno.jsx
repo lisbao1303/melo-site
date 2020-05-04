@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import "@/App.css";
-import { Row } from "reactstrap";
+import { Row, Breadcrumb, BreadcrumbItem } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { faToolbox } from "@fortawesome/free-solid-svg-icons";
 
@@ -78,14 +78,37 @@ const Cabecote = ({ match }) => {
 
           <Route
             path={`${match.url}/:productId`}
-            render={(props) => <Product data={productsData} {...props} />}
+            render={(props) => (
+              <div>
+                <Breadcrumb>
+                  <BreadcrumbItem>
+                    <a href="/ferramentas/facas">Facas</a>
+                  </BreadcrumbItem>
+                  <BreadcrumbItem>
+                    <a href={match.url}>Desempenadeira</a>
+                  </BreadcrumbItem>
+                  <BreadcrumbItem active>
+                    {props.match.params.productId}
+                  </BreadcrumbItem>
+                </Breadcrumb>
+                <Product data={productsData} {...props} />
+              </div>
+            )}
           />
           <Route
             exact
             path={match.url}
             render={() => (
-              <div className="PageCard">
-                <Row>{linkList}</Row>
+              <div>
+                <Breadcrumb>
+                  <BreadcrumbItem>
+                    <a href="/ferramentas/facas">Facas</a>
+                  </BreadcrumbItem>
+                  <BreadcrumbItem active>Desempenadeira</BreadcrumbItem>
+                </Breadcrumb>
+                <div className="PageCard">
+                  <Row>{linkList}</Row>
+                </div>
               </div>
             )}
           />

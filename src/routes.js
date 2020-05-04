@@ -5,6 +5,7 @@ import Home from "./pages/home";
 import Ferramentas from "./pages/ferramentas";
 import Sobre from "./pages/sobre";
 import Contato from "./pages/contato";
+import Enviado from "./pages/contato/enviado";
 
 import Products from "./pages/ferramentas/BrocasEscariadores/Products";
 import Cabecote from "./pages/ferramentas/Cabecote/Cabecote";
@@ -38,7 +39,8 @@ function Routes() {
         <Route path="/ferramentas/serra" component={Serras} />
         <Route path="/ferramentas/serrafita" component={Serrafitas} />
         <Route path="/sobre" component={Sobre} />
-        <Route path="/contato" component={Contato} />
+        <Route path="/contato" exact component={Contato} />
+        <Route path="/contato/enviado" component={Enviado} />
       </Switch>
     </BrowserRouter>
   );
