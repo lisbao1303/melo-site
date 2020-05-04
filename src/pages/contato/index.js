@@ -31,11 +31,7 @@ const Contato = ({ match }) => {
                     exact
                     path={match.url}
                     render={() => (
-                      <Form
-                        name="contact"
-                        action="/contato/enviado"
-                        method="post"
-                      >
+                      <Form name="contact" action="/" method="post">
                         <input type="hidden" name="form-name" value="contact" />
                         <FormGroup>
                           <Label>Nome:</Label>
