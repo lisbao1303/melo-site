@@ -73,8 +73,8 @@ function Contato() {
                     </FormGroup>
 
                     <div name="recaptcha" data-netlify-recaptcha="true"></div>
-                    <Button color="success" type="submit" onClick={handleClick}>
-                      Enviar
+                    <Button color="success" type="submit">
+                      <Button onClick={handleClick}>Enviar</Button>
                     </Button>
                   </Form>
                 </div>
