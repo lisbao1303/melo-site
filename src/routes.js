@@ -37,7 +37,7 @@ function Routes() {
         <Route path="/ferramentas/rebolos" component={Rebolos} />
         <Route path="/ferramentas/serra" component={Serras} />
         <Route path="/ferramentas/serrafita" component={Serrafitas} />
-        <Route path="/sobre" component={Sobre} />
+        <Route path="/success" component={Sobre} />
         <Route path="/contato" exact component={Contato} />
       </Switch>
     </BrowserRouter>
