@@ -26,7 +26,7 @@ function Contato() {
             <div className="formulario">
               <Card className="cardcontato" color="secondary">
                 <div>
-                  <Form name="contact" method="post" action="/sucesso.html">
+                  <Form name="contact" method="post" action="/success">
                     <input type="hidden" name="form-name" value="contact" />
                     <FormGroup>
                       <Label>Nome:</Label>
