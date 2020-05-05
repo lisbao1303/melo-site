@@ -1,5 +1,4 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 
 import "../../App.css";
@@ -12,12 +11,6 @@ import ActionBar from "../../ActionBar";
 import Footer from "../../Footer";
 
 function Contato() {
-  let history = useHistory();
-
-  function handleClick() {
-    history.push("/contato/success");
-  }
-
   return (
     <div className="conteinerprincipal">
       <div className="campocentral">
@@ -33,7 +26,7 @@ function Contato() {
             <div className="formulario">
               <Card className="cardcontato" color="secondary">
                 <div>
-                  <Form name="contact" method="post" action="/contato/success">
+                  <Form name="contact" method="post" action="/sucesso.html">
                     <input type="hidden" name="form-name" value="contact" />
                     <FormGroup>
                       <Label>Nome:</Label>
@@ -72,9 +65,8 @@ function Contato() {
                       />
                     </FormGroup>
 
-                    <div name="recaptcha" data-netlify-recaptcha="true"></div>
                     <Button color="success" type="submit">
-                      <Button onClick={handleClick}>Enviar</Button>
+                      Enviar
                     </Button>
                   </Form>
                 </div>
