@@ -1,5 +1,13 @@
 import React from "react";
-import { Button, Form, FormGroup, Label, Input } from "reactstrap";
+import {
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  Col,
+  CardBody,
+} from "reactstrap";
 
 import "../../App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -24,53 +32,55 @@ function Contato() {
           <div>
             <div className="titlecontato">Solicite um Orçamento</div>
             <div className="formulario">
-              <Card className="cardcontato mb-5" color="secondary">
-                <div>
-                  <Form name="contact" method="post" action="/success">
-                    <input type="hidden" name="form-name" value="contact" />
-                    <FormGroup>
-                      <Label>Nome:</Label>
-                      <Input
-                        type="text"
-                        name="name"
-                        bsSize="sm"
-                        placeholder="Nome ou Empresa"
-                      />
-                    </FormGroup>
-                    <FormGroup>
-                      <Label>Telefone:</Label>
-                      <Input
-                        type="phonenumber"
-                        name="phone"
-                        bsSize="sm"
-                        placeholder=""
-                      />
-                    </FormGroup>
-                    <FormGroup>
-                      <Label>Email:</Label>
-                      <Input
-                        type="email"
-                        name="email"
-                        bsSize="sm"
-                        placeholder=""
-                      />
-                    </FormGroup>
-                    <FormGroup>
-                      <Label>Mensagem:</Label>
-                      <Input
-                        type="textarea"
-                        name="message"
-                        bsSize="sm"
-                        id="exampleText"
-                      />
-                    </FormGroup>
+              <Col sm={8}>
+                <Card className=" mb-5" color="secondary">
+                  <CardBody>
+                    <Form name="contact" method="post" action="/success">
+                      <input type="hidden" name="form-name" value="contact" />
+                      <FormGroup>
+                        <Label>Nome:</Label>
+                        <Input
+                          type="text"
+                          name="name"
+                          bsSize="sm"
+                          placeholder="Nome ou Empresa"
+                        />
+                      </FormGroup>
+                      <FormGroup>
+                        <Label>Telefone:</Label>
+                        <Input
+                          type="phonenumber"
+                          name="phone"
+                          bsSize="sm"
+                          placeholder=""
+                        />
+                      </FormGroup>
+                      <FormGroup>
+                        <Label>Email:</Label>
+                        <Input
+                          type="email"
+                          name="email"
+                          bsSize="sm"
+                          placeholder=""
+                        />
+                      </FormGroup>
+                      <FormGroup>
+                        <Label>Mensagem:</Label>
+                        <Input
+                          type="textarea"
+                          name="message"
+                          bsSize="sm"
+                          id="exampleText"
+                        />
+                      </FormGroup>
 
-                    <Button color="success" type="submit">
-                      Enviar
-                    </Button>
-                  </Form>
-                </div>
-              </Card>
+                      <Button color="success" type="submit">
+                        Enviar
+                      </Button>
+                    </Form>
+                  </CardBody>
+                </Card>
+              </Col>
             </div>
           </div>
         </div>
