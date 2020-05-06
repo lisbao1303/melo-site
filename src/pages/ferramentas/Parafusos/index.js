@@ -14,9 +14,16 @@ class Brocas extends React.Component {
     this.state = {
       categorias: [
         {
-          name: "Brocas e escariadores",
-          src: "./../Imagens-largemedia/Broca/DSC_1925.JPG",
-          onClick: "/ferramentas/brocasescariadores",
+          name: "Parafusos de eixo quadrado",
+          src: "./../Imagens-largemedia/4parafusos/quadrado/parax7.jpg",
+          onClick: "/ferramentas/parafusos/quadrado",
+          color: "primary",
+        },
+        {
+          name: "Parafusos de eixo redondo",
+          src:
+            "./../Imagens-largemedia/4parafusos/redondo/parafuso-raimann.jpg",
+          onClick: "/ferramentas/parafusos/redondo",
           color: "primary",
         },
       ],

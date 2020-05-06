@@ -6,7 +6,7 @@ class Footer extends React.Component {
       <footer className="page-footer font-small blue ">
         <div className="footer-copyright text-center py-3">
           Made by:
-          <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+          <a href="https://bros.com/"> Bros</a>
         </div>
       </footer>
     );

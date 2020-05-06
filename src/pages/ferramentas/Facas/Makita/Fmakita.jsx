@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import "@/App.css";
-import { Row } from "reactstrap";
+import { Row, Breadcrumb, BreadcrumbItem } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { faToolbox } from "@fortawesome/free-solid-svg-icons";
 
@@ -10,16 +10,69 @@ import HeadLogo from "@/HeadLogo";
 import ActionBar from "@/ActionBar";
 import Footer from "@/Footer";
 import Product from "@/Product";
-const Cabecote = ({ match }) => {
+const Fmakita = ({ match }) => {
   const productsData = [
     {
       id: 1,
-      name: "cabecote",
-      src: "./../Imagens-largemedia/1pagebe/03.jpg",
-      onClick: "/ferramentas/brocasescariadores/",
+      name: "FACA MAKITA 82X28X3 WÍDEA",
+      src:
+        "./../../../Imagens-largemedia/3pagefacas/makita/Faca makita 82X28X3 Wídea (PAR).jpg",
       color: "secondary",
-      description: "decs",
-      status: "lulu",
+      status: (
+        <div>
+          MARCA: CORTEC <br /> REF. OU591612 <br /> DISPONIBILIDADE: PRONTA
+          ENTREGA
+        </div>
+      ),
+      desc2: (
+        <div>
+          Faca Indicada para aparelhar e rebaixar portas, pranchas, esquadrias e
+          outros.
+        </div>
+      ),
+      description: (
+        <div>
+          Comprimento: 82mm
+          <br />
+          Largura: 28mm
+          <br />
+          Espessura: 3mm
+          <br />
+          Corpo feito em Wídea
+          <br />1 par
+        </div>
+      ),
+    },
+    {
+      id: 2,
+      name: "FACA MAKITA 82X28X3 AÇO",
+      src:
+        "./../../../Imagens-largemedia/3pagefacas/makita/Faca makita 82x28x3 Aço (par) Cortec.jpg",
+      color: "secondary",
+      status: (
+        <div>
+          MARCA: CORTEC <br /> REF. OU150680 <br /> DISPONIBILIDADE: PRONTA
+          ENTREGA
+        </div>
+      ),
+      desc2: (
+        <div>
+          Faca Indicada para aparelhar e rebaixar portas, pranchas, esquadrias e
+          outros.
+        </div>
+      ),
+      description: (
+        <div>
+          Comprimento: 82mm
+          <br />
+          Largura: 28mm
+          <br />
+          Espessura: 3mm
+          <br />
+          Corpo feito em Aço rápido HSS
+          <br />1 par
+        </div>
+      ),
     },
 
     //Rest of the data has been left out for code brevity
@@ -31,7 +84,7 @@ const Cabecote = ({ match }) => {
         key={i}
         name={product.name}
         src={product.src}
-        onClick={`${match.url}/${product.name}`}
+        onClick={`${match.url}/${product.id}`}
         color={product.color}
       />
     );
@@ -50,14 +103,37 @@ const Cabecote = ({ match }) => {
 
           <Route
             path={`${match.url}/:productId`}
-            render={(props) => <Product data={productsData} {...props} />}
+            render={(props) => (
+              <div>
+                <Breadcrumb>
+                  <BreadcrumbItem>
+                    <a href="/ferramentas/facas">Facas</a>
+                  </BreadcrumbItem>
+                  <BreadcrumbItem>
+                    <a href={match.url}>Makita</a>
+                  </BreadcrumbItem>
+                  <BreadcrumbItem active>
+                    {props.match.params.productId}
+                  </BreadcrumbItem>
+                </Breadcrumb>
+                <Product data={productsData} {...props} />
+              </div>
+            )}
           />
           <Route
             exact
             path={match.url}
             render={() => (
-              <div className="PageCard">
-                <Row>{linkList}</Row>
+              <div>
+                <Breadcrumb>
+                  <BreadcrumbItem>
+                    <a href="/ferramentas/facas">Facas</a>
+                  </BreadcrumbItem>
+                  <BreadcrumbItem active>Makita</BreadcrumbItem>
+                </Breadcrumb>
+                <div className="PageCard">
+                  <Row>{linkList}</Row>
+                </div>
               </div>
             )}
           />
@@ -68,4 +144,4 @@ const Cabecote = ({ match }) => {
   );
 };
 
-export default Cabecote;
+export default Fmakita;

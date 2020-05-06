@@ -24,7 +24,7 @@ function Contato() {
           <div>
             <div className="titlecontato">Solicite um Orçamento</div>
             <div className="formulario">
-              <Card className="cardcontato" color="secondary">
+              <Card className="cardcontato mb-5" color="secondary">
                 <div>
                   <Form name="contact" method="post" action="/success">
                     <input type="hidden" name="form-name" value="contact" />
