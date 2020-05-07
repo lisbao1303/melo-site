@@ -5,8 +5,8 @@ class Footer extends React.Component {
     return (
       <footer className="page-footer font-small blue ">
         <div className="footer-copyright text-center py-3">
-          Made by:
-          <a href="https://bros.com/"> Bros</a>
+          Desenvolvido por:
+          <a href="/contato"> Gabriel Elisbão</a>
         </div>
       </footer>
     );
