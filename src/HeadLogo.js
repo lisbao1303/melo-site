@@ -4,7 +4,7 @@ import banner from "@/banner.jpeg";
 class HeadLogo extends React.Component {
   render() {
     return (
-      <Media>
+      <Media className="shadow">
         <img className="img-fluid" src={banner} alt="./banner.png" />
       </Media>
     );

@@ -37,7 +37,7 @@ const Product = ({ match, data }) => {
               <CardHeader>
                 <b>Informações Técnicas</b>
               </CardHeader>
-              <CardBody>
+              <CardBody className="text-justify">
                 <p>{product.description}</p>
               </CardBody>
             </Card>
@@ -48,7 +48,7 @@ const Product = ({ match, data }) => {
           <Col sm={4} className="  mh-100 mb-4">
             <Card className="mb-4 bg-secondary">
               {" "}
-              <CardBody>
+              <CardBody className="text-justify">
                 <p>{product.status}</p>
               </CardBody>
             </Card>
@@ -56,7 +56,7 @@ const Product = ({ match, data }) => {
               <CardHeader>
                 <b>Descrição</b>
               </CardHeader>
-              <CardBody>
+              <CardBody className="text-justify">
                 <p>{product.desc2}</p>
               </CardBody>
             </Card>
@@ -66,7 +66,7 @@ const Product = ({ match, data }) => {
               <CardHeader>
                 <b>Informações Técnicas</b>
               </CardHeader>
-              <CardBody>
+              <CardBody className="text-justify">
                 <p>{product.description}</p>
               </CardBody>
             </Card>

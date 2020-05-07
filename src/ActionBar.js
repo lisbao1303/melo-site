@@ -17,8 +17,6 @@ function ActionBar(props) {
 
   const path = () => {
     switch (props.text) {
-      case "Home":
-        return "/";
       case "Ferramentas":
         return "/ferramentas";
       case "Contato":
@@ -30,7 +28,7 @@ function ActionBar(props) {
     }
   };
   return (
-    <Navbar className="" color="primary" dark expand="md">
+    <Navbar className="" color=" shadow  bg-primary" dark expand="md">
       <NavbarBrand className="text-warning" href={path}>
         <FontAwesomeIcon icon={props.icon} /> {props.text}
       </NavbarBrand>
@@ -38,11 +36,6 @@ function ActionBar(props) {
       <NavbarToggler onClick={toggle} />
       <Collapse isOpen={!isOpen} navbar>
         <Nav className="mr-auto " navbar>
-          <NavItem>
-            <NavLink className="text-white" href="/">
-              Home
-            </NavLink>
-          </NavItem>
           <NavItem>
             <NavLink className="text-white" href="/ferramentas">
               Ferramentas
